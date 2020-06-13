@@ -29,8 +29,8 @@ jobs:
           command: tar zcf dist.tar.gz dist/local-weather-app
       - store_artifacts:
           path: dist.tar.gz
-    workflows:
-      version: 2
-      build-and-test:
-        jobs:
-          - build
+workflows:
+  version: 2
+    build-and-test:
+      jobs:
+        - build
