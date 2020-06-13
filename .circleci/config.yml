@@ -31,6 +31,6 @@ jobs:
           path: dist.tar.gz
 workflows:
   version: 2
-    build-and-test:
-      jobs:
-        - build
+  build-and-test:
+    jobs:
+      - build
