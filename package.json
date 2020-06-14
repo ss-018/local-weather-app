@@ -6,6 +6,8 @@
     "start": "ng serve --port 5000",
     "build": "ng build",
     "build:prod": "ng build --prod",
+    "prenow:publish": "npm run build:prod",
+    "now:publish": "now --platform-version 2 dist/local-weather-app",
     "test": "ng test",
     "test:coverage": "npm test -- --code-coverage",
     "lint": "ng lint",
