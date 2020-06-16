@@ -63,7 +63,7 @@ describe("CurrentWeatherComponent", () => {
 
 		// Assert on DOM
 		const debugE1 = fixture.debugElement;
-		const titleE1: HTMLElement = debugE1.query(By.css("span")).nativeElement;
+		const titleE1: HTMLElement = debugE1.query(By.css(".mat-title")).nativeElement;
 		expect(titleE1.textContent).toContain("Seattle");
 	});
 });
