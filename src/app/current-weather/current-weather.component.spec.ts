@@ -3,6 +3,7 @@ import { By } from "@angular/platform-browser";
 import { injectSpy } from "angular-unit-test-helper";
 import { of } from "rxjs";
 
+import { MaterialModule } from "../material.module";
 import { WeatherService } from "../weather/weather.service";
 import { fakeWeather } from "../weather/weather.service.fake";
 import { CurrentWeatherComponent } from "./current-weather.component";
@@ -22,6 +23,7 @@ describe("CurrentWeatherComponent", () => {
 					useValue: weatherServiceSpy,
 				},
 			],
+			imports: [MaterialModule],
 		}).compileComponents();
 		weatherServiceMock = injectSpy(WeatherService);
 	}));
@@ -61,7 +63,7 @@ describe("CurrentWeatherComponent", () => {
 
 		// Assert on DOM
 		const debugE1 = fixture.debugElement;
-		const titleE1: HTMLElement = debugE1.query(By.css("span")).nativeElement;
+		const titleE1: HTMLElement = debugE1.query(By.css(".mat-title")).nativeElement;
 		expect(titleE1.textContent).toContain("Seattle");
 	});
 });
