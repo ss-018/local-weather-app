@@ -15,7 +15,7 @@ export class CitySearchComponent implements OnInit {
 	constructor(private weatherService: WeatherService) {}
 
 	getErrorMessage(): string {
-		return this.search.hasError("minLength")
+		return this.search.hasError("minlength")
 			? "Type more than one character to search"
 			: "Invalid input";
 	}
